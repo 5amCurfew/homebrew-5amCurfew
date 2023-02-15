@@ -5,11 +5,11 @@
 class Xpln < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xpln"
-  version "1.0.5"
+  version "1.0.6"
 
   on_macos do
-    url "https://github.com/5amCurfew/xpln/releases/download/v1.0.5/xpln_1.0.5_darwin_all.tar.gz"
-    sha256 "ec115c7a1ff329c67f93bfae9ce76473223383a33ef9ba92addaa46bd0e78513"
+    url "https://github.com/5amCurfew/xpln/releases/download/v1.0.6/xpln_1.0.6_darwin_all.tar.gz"
+    sha256 "4d2016743b6410180bf024dfe24f08518dd667da2d131214c397c208e8418d00"
 
     def install
       bin.install "xpln"
@@ -17,17 +17,17 @@ class Xpln < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xpln/releases/download/v1.0.5/xpln_1.0.5_linux_arm64.tar.gz"
-      sha256 "5c4997ec11de1d2b67bf1e57f72dcdbb737326e299b4fd45981c22f0bef3de61"
+    if Hardware::CPU.intel?
+      url "https://github.com/5amCurfew/xpln/releases/download/v1.0.6/xpln_1.0.6_linux_amd64.tar.gz"
+      sha256 "e2e206a2240e0ab02d7aa3f38fd0c69b83637c0e220aa4c14f5091c2a4c09027"
 
       def install
         bin.install "xpln"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xpln/releases/download/v1.0.5/xpln_1.0.5_linux_amd64.tar.gz"
-      sha256 "fbedf5d2f41b2fd3a7b512ced2a72934d5b6156174429db5722b7fa0dabdecb7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/xpln/releases/download/v1.0.6/xpln_1.0.6_linux_arm64.tar.gz"
+      sha256 "5843fbd5a74dfaae1c9e69611b0adf81567be0e1ee74b5010280947ac1a244ed"
 
       def install
         bin.install "xpln"
