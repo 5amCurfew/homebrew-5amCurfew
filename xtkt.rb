@@ -5,11 +5,11 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.0.3"
+  version "0.0.21"
 
   on_macos do
-    url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.3/xtkt_0.0.3_darwin_all.tar.gz"
-    sha256 "e8ac5c009d4d6b6c7f7c15e7cb5cfdbe19b649344db44f6d22ec76a6644f308c"
+    url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.21/xtkt_0.0.21_darwin_all.tar.gz"
+    sha256 "19fe85d700f8d94a98fc3902e8d644b195b3e5fc758d7a7fb682537255350fe2"
 
     def install
       bin.install "xtkt"
@@ -17,17 +17,17 @@ class Xtkt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.3/xtkt_0.0.3_linux_arm64.tar.gz"
-      sha256 "fd36930e2b4b5a5ba08ac360fe14f88f7cee5785239c78c93024dd6d093017ca"
+    if Hardware::CPU.intel?
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.21/xtkt_0.0.21_linux_amd64.tar.gz"
+      sha256 "3f7e0ac7a3cda53aa4d88feda56d6f533542d4bcb4b1f999111529cb7b50545d"
 
       def install
         bin.install "xtkt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.3/xtkt_0.0.3_linux_amd64.tar.gz"
-      sha256 "f10c498bd8212f03231d105044f9e58fad38cdb4840d499a628d45dbc8f555b6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.0.21/xtkt_0.0.21_linux_arm64.tar.gz"
+      sha256 "753fe8cd96a0bd3ad85a2303239f85ecf1e75d001dfdf11acfe92562b18e7be5"
 
       def install
         bin.install "xtkt"
