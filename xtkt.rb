@@ -5,32 +5,46 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.1.9"
+  version "0.2.1"
 
   on_macos do
-    url "https://github.com/5amCurfew/xtkt/releases/download/v0.1.9/xtkt_0.1.9_darwin_all.tar.gz"
-    sha256 "cbb8ee484efa25f52fa773021413e7f5e3bf6fe9cc664e52b68c8530b53769bd"
-
-    def install
-      bin.install "xtkt"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.1.9/xtkt_0.1.9_linux_arm64.tar.gz"
-      sha256 "7f582e98715b32419a55f04ee46ce9a07d7df0a3954bb04de2ae6dea6b096610"
+    on_intel do
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "96bb9bd7fcc2582556e25095ff401d5afdbee8444acc68e6c3ddf0244f9d732b"
 
       def install
         bin.install "xtkt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.1.9/xtkt_0.1.9_linux_amd64.tar.gz"
-      sha256 "2fd1b1bdb4d266348296c39461bb5f87ef00979c37e68ff547fd4aa6365f492a"
+    on_arm do
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Darwin_arm64.tar.gz"
+      sha256 "c06828caa20cbcbe66c6b987091afb7b88f1c66b674dc96e7dec1ddf513f64fa"
 
       def install
         bin.install "xtkt"
+      end
+    end
+  end
+
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Linux_x86_64.tar.gz"
+        sha256 "e0d4ec629690d2c8512f22beae7ddc338cfc41634d123ee702d3479d42e46ab3"
+
+        def install
+          bin.install "xtkt"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Linux_arm64.tar.gz"
+        sha256 "e88b6de9dcce66fdab15c2be0a27224e479f44d64272e645c0d57aa0870389d8"
+
+        def install
+          bin.install "xtkt"
+        end
       end
     end
   end
