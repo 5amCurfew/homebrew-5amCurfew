@@ -5,20 +5,20 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     on_intel do
-      url "https://github.com/5amCurfew/orca/releases/download/v0.1.8/orca_Darwin_x86_64.tar.gz"
-      sha256 "8d199a5e1f042a9111c86b680760ea87cfffae5aae45f2037bcac3051a19ec09"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.1.9/orca_Darwin_x86_64.tar.gz"
+      sha256 "d8807998c318c43e320146a7e3128eaa9d920649089af67aca9ac80bd15e93d1"
 
       def install
         bin.install "orca"
       end
     end
     on_arm do
-      url "https://github.com/5amCurfew/orca/releases/download/v0.1.8/orca_Darwin_arm64.tar.gz"
-      sha256 "d074a0ae26b240df89d37efba11df85a301d50317cac0a2c0f50de04bb738462"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.1.9/orca_Darwin_arm64.tar.gz"
+      sha256 "57748d7613631faf9250ea56800e4c1b9d16dd03837e21e711ee35d0bb9715b4"
 
       def install
         bin.install "orca"
@@ -29,8 +29,8 @@ class Orca < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/orca/releases/download/v0.1.8/orca_Linux_x86_64.tar.gz"
-        sha256 "796bad38d7f259ce53cab2fea6e086dc7f5b01299cfc7fe9cbb05079319e09f8"
+        url "https://github.com/5amCurfew/orca/releases/download/v0.1.9/orca_Linux_x86_64.tar.gz"
+        sha256 "f3b38fbcee9a831c7b6561b553d5467b4cfc6f48a14eeaf62e63bb8a8aff9232"
 
         def install
           bin.install "orca"
@@ -39,8 +39,8 @@ class Orca < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/orca/releases/download/v0.1.8/orca_Linux_arm64.tar.gz"
-        sha256 "a8b1f8f6f6f1017bd68c5d4093f832d11ad1b314f5db26e89940304205b0496d"
+        url "https://github.com/5amCurfew/orca/releases/download/v0.1.9/orca_Linux_arm64.tar.gz"
+        sha256 "4c458ef76247eaed84b54aeaa9d5803498ebc4541a7017e4b183c016f252b2fe"
 
         def install
           bin.install "orca"
