@@ -5,20 +5,20 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Darwin_x86_64.tar.gz"
-      sha256 "96bb9bd7fcc2582556e25095ff401d5afdbee8444acc68e6c3ddf0244f9d732b"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.3.0/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "9c0e44b455085dc8a24e96488807b60db17a350ef1a02fe235697be6597060df"
 
       def install
         bin.install "xtkt"
       end
     end
     on_arm do
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Darwin_arm64.tar.gz"
-      sha256 "c06828caa20cbcbe66c6b987091afb7b88f1c66b674dc96e7dec1ddf513f64fa"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.3.0/xtkt_Darwin_arm64.tar.gz"
+      sha256 "dab8f1d553d137744fb01993025a4e950e77516742905574d60175694715fa85"
 
       def install
         bin.install "xtkt"
@@ -29,8 +29,8 @@ class Xtkt < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Linux_x86_64.tar.gz"
-        sha256 "e0d4ec629690d2c8512f22beae7ddc338cfc41634d123ee702d3479d42e46ab3"
+        url "https://github.com/5amCurfew/xtkt/releases/download/v0.3.0/xtkt_Linux_x86_64.tar.gz"
+        sha256 "eef5328be2f7af54399ddb58cba73e1f7e197f0b7098e9f1163e869486e5be19"
 
         def install
           bin.install "xtkt"
@@ -39,8 +39,8 @@ class Xtkt < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/xtkt/releases/download/v0.2.1/xtkt_Linux_arm64.tar.gz"
-        sha256 "e88b6de9dcce66fdab15c2be0a27224e479f44d64272e645c0d57aa0870389d8"
+        url "https://github.com/5amCurfew/xtkt/releases/download/v0.3.0/xtkt_Linux_arm64.tar.gz"
+        sha256 "3bae9d4e98456f791c1e25265fc8ca43bc457033c0cada80bbb319fbd010c60f"
 
         def install
           bin.install "xtkt"
