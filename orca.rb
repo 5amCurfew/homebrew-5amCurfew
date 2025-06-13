@@ -5,20 +5,20 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.2.3"
+  version "0.3.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/5amCurfew/orca/releases/download/v0.2.3/orca_Darwin_x86_64.tar.gz"
-      sha256 "aec86a4bbeac21b517cba774f3ca7495dbf0d3fc2dcec68cf706cb1646316d10"
+    if Hardware::CPU.intel?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.3.0/orca_Darwin_x86_64.tar.gz"
+      sha256 "cd779008bd4c49da04d92cea4e642418c709f6e6f79be09bbcf33811bfc5982f"
 
       def install
         bin.install "orca"
       end
     end
-    on_arm do
-      url "https://github.com/5amCurfew/orca/releases/download/v0.2.3/orca_Darwin_arm64.tar.gz"
-      sha256 "3d1246cac42baa6c93ecaff282f23b2e39494c0ff4157071a7140398b0636e07"
+    if Hardware::CPU.arm?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.3.0/orca_Darwin_arm64.tar.gz"
+      sha256 "fa358e9846cf25b49a614a42d049e59bb2182a8e70291fe665b043ac42f8bd84"
 
       def install
         bin.install "orca"
@@ -27,24 +27,18 @@ class Orca < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/orca/releases/download/v0.2.3/orca_Linux_x86_64.tar.gz"
-        sha256 "33ef318f20c0608ab9f2566aeed231c2c7db6c1779ada72ed50f3ebf6400c7e7"
-
-        def install
-          bin.install "orca"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.3.0/orca_Linux_x86_64.tar.gz"
+      sha256 "1f9b8b3c0042f528bbc6e14f7e935ffb6c5ba57b4b8036c8769fd4452a98d5e5"
+      def install
+        bin.install "orca"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/5amCurfew/orca/releases/download/v0.2.3/orca_Linux_arm64.tar.gz"
-        sha256 "aa4c5ae2fddb0d83c189c47be5cd8bc44b0ec97db36cdb58ac8222afc75b3dca"
-
-        def install
-          bin.install "orca"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.3.0/orca_Linux_arm64.tar.gz"
+      sha256 "18a66284e704d47b1e30a08acf42d088a9b19350efa4e882655b3eeb520e3dc2"
+      def install
+        bin.install "orca"
       end
     end
   end
