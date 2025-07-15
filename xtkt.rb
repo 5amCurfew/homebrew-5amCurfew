@@ -5,20 +5,20 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.0/xtkt_Darwin_x86_64.tar.gz"
-      sha256 "897c275867373b2543a31f3c1401ebc8364b9a7c01ce9c9d618b7b4eff1a8d14"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.1/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "33ea94bab306231ca2b65ae91b74955ccc0f7918071550cd782d6c1ed6bf8d9d"
 
       def install
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.0/xtkt_Darwin_arm64.tar.gz"
-      sha256 "e5dc80a5a8fb8758044c73b89ed357682b1abf80ab014a17348528bde0e74a6d"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.1/xtkt_Darwin_arm64.tar.gz"
+      sha256 "ae50c682b372c4bf5a13ce6879ee54a6ed808720840e4c0ca56c2d608d45b527"
 
       def install
         bin.install "xtkt"
@@ -28,15 +28,15 @@ class Xtkt < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.0/xtkt_Linux_x86_64.tar.gz"
-      sha256 "7e672af4dd6b0ea3c7f05e799ef6937670636cee7db4f4290aa446327c2c351b"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.1/xtkt_Linux_x86_64.tar.gz"
+      sha256 "2ecb2ed25e37356ce2c7a0ba15a2c67925792af0250ce6f1332bb367cd5d5f70"
       def install
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.0/xtkt_Linux_arm64.tar.gz"
-      sha256 "406b47edd887dcaee21a49709dc0c955089c35711344a0df58ab942e74124a54"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.5.1/xtkt_Linux_arm64.tar.gz"
+      sha256 "98355e47ed7dda2bf90bead591ea50d40c919b42f43752471f83d0c0142b6752"
       def install
         bin.install "xtkt"
       end
