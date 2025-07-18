@@ -5,20 +5,20 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.1/orca_Darwin_x86_64.tar.gz"
-      sha256 "f50afc0f52354e1bf0bac80354cf97cc93f5678aa266742d5a9ed03b1f812341"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.4.2/orca_Darwin_x86_64.tar.gz"
+      sha256 "626e3bda4e6e70feb4dcb02ab02c4e1a3e7b62b9a9101333277f6df56301a0c6"
 
       def install
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.1/orca_Darwin_arm64.tar.gz"
-      sha256 "632f865e01e517045888142ad4f00907731ad5ff6013d831cc17956d08fa0e29"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.4.2/orca_Darwin_arm64.tar.gz"
+      sha256 "8e2d057c836871c66e02539636b5b8c5a7b747a3951ec22aa596336fecbfbfe3"
 
       def install
         bin.install "orca"
@@ -28,15 +28,15 @@ class Orca < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.1/orca_Linux_x86_64.tar.gz"
-      sha256 "c3bb91bdd6bdad5c0471035282f421df47b854e501a094caf9071e0dc35cfcce"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.4.2/orca_Linux_x86_64.tar.gz"
+      sha256 "4b5705ce851de9df6f2ef6faa27de3493cc249bb3eb597805a7e92e7d1af04d6"
       def install
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.1/orca_Linux_arm64.tar.gz"
-      sha256 "fefab30d956a191c1292f7cdc212c95bb4407e6a6305453669ffac2ecde265f0"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.4.2/orca_Linux_arm64.tar.gz"
+      sha256 "7a9bad5949fac2ee8877c0052a669a21e955c83f85a4537610e19f0440c78113"
       def install
         bin.install "orca"
       end
