@@ -5,20 +5,20 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.4.4"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.4/orca_Darwin_x86_64.tar.gz"
-      sha256 "3e8ad7aec7256d1d2874eea2b7639bd23150522c8f48a70c68d3e6d1f643e6e8"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Darwin_x86_64.tar.gz"
+      sha256 "3455759755271c04bdc9397542a5d180217b114b96ce8ba4559dd3454fa0d207"
 
       def install
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.4/orca_Darwin_arm64.tar.gz"
-      sha256 "213e4ef1783bffdb4d654de06af8680ac61ba74940055fd9ddd3153bfdcc9eb6"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Darwin_arm64.tar.gz"
+      sha256 "636fa60a3992af7e59fbad7dfb90f4eb87efeb2f01927c5fb43abc8f2c5ee207"
 
       def install
         bin.install "orca"
@@ -27,16 +27,16 @@ class Orca < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.4/orca_Linux_x86_64.tar.gz"
-      sha256 "f5e8d41c15611fb36c821e3158c0c970a18a2400ddd248b22601b8b1a9908299"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Linux_x86_64.tar.gz"
+      sha256 "d017382583ab2c2ffb255c8d8eac3a94466d007c0995f5281f5614dfc480b625"
       def install
         bin.install "orca"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.4.4/orca_Linux_arm64.tar.gz"
-      sha256 "5aa6c459b907ec26f582379d636b9e50f64d2395ad25ef666ce40aaf83e1bb0a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Linux_arm64.tar.gz"
+      sha256 "839d7fc5664c909c618f0803a22472598f772ead9d5e5c43190e4e5a63ebee48"
       def install
         bin.install "orca"
       end
