@@ -5,20 +5,20 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.6.0/xtkt_Darwin_x86_64.tar.gz"
-      sha256 "dc957c789690307c30b4fcc01367d7c5d8742fb7cf591941b06b76088f96058d"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.0/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "177bf8e6b34087823f16cd321a5aa55b63208c1c38e84189422adf5054958eb9"
 
       def install
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.6.0/xtkt_Darwin_arm64.tar.gz"
-      sha256 "82370079f0a2e8f6f8850bdf816ec86d07d75908a7ae7c51434a582e1289fc0a"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.0/xtkt_Darwin_arm64.tar.gz"
+      sha256 "2f93d1c44b91cdcef5a6affed415a6213cd281fee64f38dd30ced0d00ac4d397"
 
       def install
         bin.install "xtkt"
@@ -27,16 +27,16 @@ class Xtkt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.6.0/xtkt_Linux_x86_64.tar.gz"
-      sha256 "bee5c6de192dfa102cab820b03d3b60e4b97b23c3264e9aed5c78953cb54f1f3"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.0/xtkt_Linux_x86_64.tar.gz"
+      sha256 "9fe34ffee059b045fc85354425c2f02a9ba4bd95adf37677d3f94faac2b43395"
       def install
         bin.install "xtkt"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.6.0/xtkt_Linux_arm64.tar.gz"
-      sha256 "176686d5c881aedad7d6fbb2d79c964e7b2bc9f1928fa73cdc4a18604e080d0e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.0/xtkt_Linux_arm64.tar.gz"
+      sha256 "cf1c74b7e454f83b15ccf4ee792386c298cb16501c1efdeb979bf1c2d3a658b3"
       def install
         bin.install "xtkt"
       end
