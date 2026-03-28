@@ -5,22 +5,22 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.7.1"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.1/xtkt_Darwin_x86_64.tar.gz"
-      sha256 "01fdf4cde3d28b976e3fe77ccf84381fc070662d2eccf3480d7e0986bb02e2f0"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.0/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "915ed8d09c8d4abbd1b642ce1a0e80163c402ae061483e403e46f1287fa1c473"
 
-      def install
+      define_method(:install) do
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.1/xtkt_Darwin_arm64.tar.gz"
-      sha256 "9243570545bd2139631330807538f3a8426db6dc83366d0a1505ef5a9a0cbc34"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.0/xtkt_Darwin_arm64.tar.gz"
+      sha256 "65b2dbb84f7ee88173b2799391265666b04dd2b89c61c95bc0bcd0577a5634e5"
 
-      def install
+      define_method(:install) do
         bin.install "xtkt"
       end
     end
@@ -28,16 +28,16 @@ class Xtkt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.1/xtkt_Linux_x86_64.tar.gz"
-      sha256 "4efbe309f29ad61978df0b091c10a873e460bec4af8a6fdd95a075f7765b1b25"
-      def install
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.0/xtkt_Linux_x86_64.tar.gz"
+      sha256 "b024504833563b1ec530e7f3fae82d8dc8cfcc2503a5bd5886ecf2a0364d08c4"
+      define_method(:install) do
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.7.1/xtkt_Linux_arm64.tar.gz"
-      sha256 "3ebde6112f67ffc37fcf1587f11c3b0f48c92c09dbb318fab7c32dda96d784b2"
-      def install
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.0/xtkt_Linux_arm64.tar.gz"
+      sha256 "129a64c82631789bbc95541ecf15d1a9792006234d3fd8991bf8d830f21bf5c5"
+      define_method(:install) do
         bin.install "xtkt"
       end
     end
