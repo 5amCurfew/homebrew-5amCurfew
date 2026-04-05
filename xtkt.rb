@@ -5,20 +5,20 @@
 class Xtkt < Formula
   desc ""
   homepage "https://github.com/5amCurfew/xtkt"
-  version "0.8.4"
+  version "0.8.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.4/xtkt_Darwin_x86_64.tar.gz"
-      sha256 "0f3ebeae092ec1d2b505caa2a1e2954540129c77ae90b24eef9ede2f9d408d3b"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.5/xtkt_Darwin_x86_64.tar.gz"
+      sha256 "cb822f205ed7582bb9c87c7137dbee7db97313063bb903e8eca9db56ca062105"
 
       define_method(:install) do
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.4/xtkt_Darwin_arm64.tar.gz"
-      sha256 "305851cdcb3ae86ef41d974db2648058c6190d83f86d4c6412967914037f3267"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.5/xtkt_Darwin_arm64.tar.gz"
+      sha256 "985bf4396c72a8faec6bedc4cecf5b70eff6a6584873f302b087fcdc79bd30cf"
 
       define_method(:install) do
         bin.install "xtkt"
@@ -28,15 +28,15 @@ class Xtkt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.4/xtkt_Linux_x86_64.tar.gz"
-      sha256 "a4be157c0c8997b55258858ecbcd7d8fb194b78418d72cf6625d4b781825674c"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.5/xtkt_Linux_x86_64.tar.gz"
+      sha256 "93a1f79ad653963bada73077d064c3cedf2ba7f8b62384905c425141f2041476"
       define_method(:install) do
         bin.install "xtkt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.4/xtkt_Linux_arm64.tar.gz"
-      sha256 "c7ca74ca57dfa8d0dff76469be941dbea0053b1793b09f2de56faf61da44c24c"
+      url "https://github.com/5amCurfew/xtkt/releases/download/v0.8.5/xtkt_Linux_arm64.tar.gz"
+      sha256 "728a863e6c2bfdcc10a70fe1d44929f1a44b019f7eaa75f82f434c40769e33d1"
       define_method(:install) do
         bin.install "xtkt"
       end
