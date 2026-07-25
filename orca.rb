@@ -5,22 +5,22 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Darwin_x86_64.tar.gz"
-      sha256 "3455759755271c04bdc9397542a5d180217b114b96ce8ba4559dd3454fa0d207"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.0/orca_Darwin_x86_64.tar.gz"
+      sha256 "c5010401ed3c692eb9e1fc89e2d6ed91e26029a345e9f0738186ab6fadd108d7"
 
-      def install
+      define_method(:install) do
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Darwin_arm64.tar.gz"
-      sha256 "636fa60a3992af7e59fbad7dfb90f4eb87efeb2f01927c5fb43abc8f2c5ee207"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.0/orca_Darwin_arm64.tar.gz"
+      sha256 "8de599f33e96159af1bbed2bb9ff91aca2daa2c8b312bf75a1c2599782ef02e2"
 
-      def install
+      define_method(:install) do
         bin.install "orca"
       end
     end
@@ -28,16 +28,16 @@ class Orca < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Linux_x86_64.tar.gz"
-      sha256 "d017382583ab2c2ffb255c8d8eac3a94466d007c0995f5281f5614dfc480b625"
-      def install
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.0/orca_Linux_x86_64.tar.gz"
+      sha256 "cffea47ac6e5b76e469f80e05ebf7a37028eb704d54aef02b1807b1f87e54c74"
+      define_method(:install) do
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.5.0/orca_Linux_arm64.tar.gz"
-      sha256 "839d7fc5664c909c618f0803a22472598f772ead9d5e5c43190e4e5a63ebee48"
-      def install
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.0/orca_Linux_arm64.tar.gz"
+      sha256 "73cdeeba8410dff43670937931ddfc52aefb7dc5cc2c152de51162e7c92f10f6"
+      define_method(:install) do
         bin.install "orca"
       end
     end
