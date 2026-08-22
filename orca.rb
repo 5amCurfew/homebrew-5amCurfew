@@ -5,20 +5,20 @@
 class Orca < Formula
   desc ""
   homepage "https://github.com/5amCurfew/orca"
-  version "0.6.1"
+  version "0.6.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.6.1/orca_Darwin_x86_64.tar.gz"
-      sha256 "08043c7b83f466e4609269b46b3e859f288351603342aa0bfd80644ed57b9fe5"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.2/orca_Darwin_x86_64.tar.gz"
+      sha256 "7e752257502ac87cc106ac656c812700f6b1ec3d7ccf923cbdf51f4856152045"
 
       define_method(:install) do
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.6.1/orca_Darwin_arm64.tar.gz"
-      sha256 "72596e5cf87261028e92aaef44e0a4a2b659a5859b00658b827df008c4b1500f"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.2/orca_Darwin_arm64.tar.gz"
+      sha256 "e58fe2ad169c618ecc9f0b85e2ee5492f0112a97f044cbea0a091a05cf929f70"
 
       define_method(:install) do
         bin.install "orca"
@@ -28,15 +28,15 @@ class Orca < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.6.1/orca_Linux_x86_64.tar.gz"
-      sha256 "65edf790097c66c2ec1998514c0dd22d04b82daae9bb1f6c78de222933b2e188"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.2/orca_Linux_x86_64.tar.gz"
+      sha256 "e045168727e89d392742dcad072b6cfe13b2d5a89af21c7d55afe9d32108ba98"
       define_method(:install) do
         bin.install "orca"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/5amCurfew/orca/releases/download/v0.6.1/orca_Linux_arm64.tar.gz"
-      sha256 "794885ae16759fe893f238049aec104f2507b538f362ce68b4977d5d0ee02e06"
+      url "https://github.com/5amCurfew/orca/releases/download/v0.6.2/orca_Linux_arm64.tar.gz"
+      sha256 "9433b39962fb63f93b4c5036c5f8935287db109cc56c8d880e22177cd9ce86a0"
       define_method(:install) do
         bin.install "orca"
       end
